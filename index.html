@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+    <head>
+        <title>Paint my dash</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The webapplication runs in full-screen in iOS device. -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script src="js/modernizr-2.5.3.min.js"></script>
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/app.init.js"></script>
+        <script src="js/jquery.mobile-1.0.1.min.js"></script>
+        <script src="js/app.offline.js"></script>
+        <script src="js/function.help.js"></script>
+        <script src="js/app.database.js"></script>
+        <script src="js/app.swipe.js"></script>
+        <script src="js/app.draw.js"></script>
+    </head>
+    <body>
+        <!-- Page one, Draw a image ------------------------------------------->
+        <div data-role="page" id="page1" data-fullscreen="true">
+            <div id="header">
+                <header data-role="header" data-theme="a">
+                    <h1>Paint my Dash</h1>
+                    <nav data-role="navbar">
+                        <ul>
+                            <li><a href="#page1" class="ui-btn-active ui-state-persist">Wall</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div id="imagesDiv" style="width: 100%; height: 100%;">
+                <div id="rightPanel">
+                    <div id="colorMenu">
+                        <div style="background-color:#000000;"></div>
+                        <div style="background-color:#808080;"></div>
+                        <div style="background-color:#C0C0C0;"></div>
+                        <div style="background-color:#ffffff;"></div>
+
+                        <div style="background-color:#0000A0;"></div>
+                        <div style="background-color:#0000FF;"></div>
+                        <div style="background-color:#ADD8E6;"></div>
+                        <div style="background-color:#00FFFF;"></div>
+
+                        <div style="background-color:#800080;"></div>
+                        <div style="background-color:#A52A2A;"></div>
+                        <div style="background-color:#800000;"></div>
+                        <div style="background-color:#FF00FF;"></div>
+
+                        <div style="background-color:#FF0000;"></div>
+                        <div style="background-color:#FFA500;"></div>
+                        <div style="background-color:#FFFF00;"></div>
+                        <div style="background-color:#ECD872;"></div>
+
+                        <div style="background-color:#008000;"></div>
+                        <div style="background-color:#808000;"></div>
+                        <div style="background-color:#348017;"></div>
+                        <div style="background-color:#00FF00;"></div>		
+                    </div><br/>
+                    Color code:<br/>
+                    <input type="color" value="#000000" id="selectedColor" style="width: 180px;"/>
+                    Size:<br/> 
+                    <input type="range" min="1" max="50" value="10" id="brushSize" style="width: 40px; margin: 0px; padding: 0px;"/>
+                    <br/><br/>
+                    <a href="#" id="clear" data-role="button" data-theme="a">Clear</a>
+                    <a href="#page3" id="save" data-role="button" data-theme="b" data-rel="dialog">Spara</a><br/>
+                </div>
+                <canvas id="canvas" style="z-index: 110;"></canvas>
+            </div>
+        </div>
+    </body>
+</html>
